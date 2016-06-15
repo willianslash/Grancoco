@@ -1,0 +1,14 @@
+<ion-view view-title="Elenco">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="atleta in elenco" type="item-text-wrap">
+        <img ng-src="{{atleta.face}}">
+        <h2>{{atleta.name}}</h2>
+        <p>{{atleta.lastText}}</p>
+       
+
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
