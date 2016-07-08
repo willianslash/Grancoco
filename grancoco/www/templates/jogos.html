@@ -1,9 +1,33 @@
 <ion-view view-title="Calendário de Jogos">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+  	<ion-content>
+  		<div ng-show="msgShow">
+  			<center>
+  				<br />
+  				<span>{{msg}}</span>
+  				<span style='color:#ff0000;'>{{msgFalha}}</span>
+			</center>
+		</div>
+	    <ion-slide-box ng-show="slideShow" on-slide-changed="slideHasChanged($index)" does-continue='true' style="height:90%">
+			<ion-slide ng-repeat="jogo in jogos.slice().reverse()">
+		    <div>
+		    	<center>
+		    		<br /><br />
+		    		<table align='center' border='2'>
+		    			<tr>
+		    				<td colspan="5" align='center'><b>{{jogo.dia_semana}} {{jogo.data}}</b> {{jogo.local}} {{jogo.hora}} <br /> <br /></td>
+	    				</tr>
+    					<tr>
+    						<td align='center'><img ng-src="{{jogo.img_time1}}" width="88"><br />{{jogo.time1}}</td>
+    						<td style='vertical-align: middle;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:50px; font-weight:bold;">{{jogo.placar_time1}}&nbsp;</span></td>
+    						<td style='vertical-align: middle;'><span style="font-size:20px;">X</span></td>
+    						<td style='vertical-align: middle;'><span style="font-size:50px; font-weight:bold;">&nbsp;{{jogo.placar_time2}}&nbsp;&nbsp;</span></td>
+    						<td align='center'><img ng-src="{{jogo.img_time2}}" width="88"><br />{{jogo.time2}}</td>
+    					</tr>
+	    			</table>
+	    		</center>
+		    </div>
+	  	</ion-slide>
+	  
+	</ion-slide-box>
   </ion-content>
 </ion-view>

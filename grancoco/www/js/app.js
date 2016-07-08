@@ -23,6 +23,8 @@ angular.module('Grancoco', ['ionic', 'Grancoco.controllers', 'Grancoco.services'
   });
 })
 
+
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -49,6 +51,15 @@ angular.module('Grancoco', ['ionic', 'Grancoco.controllers', 'Grancoco.services'
     }
   })
 
+  .state('tab.contato', {
+    url: '/contato',
+    views: {
+      'tab-contato': {
+        templateUrl: 'templates/contato.html'
+      }
+    }
+  })
+
   .state('tab.elenco', {
       url: '/elenco',
       views: {
@@ -58,12 +69,12 @@ angular.module('Grancoco', ['ionic', 'Grancoco.controllers', 'Grancoco.services'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:elencoId',
+    .state('tab.atleta', {
+      url: '/elenco/:elencoId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-elenco': {
+          templateUrl: 'templates/atleta.html',
+          controller: 'AtletaDetailCtrl'
         }
       }
     })

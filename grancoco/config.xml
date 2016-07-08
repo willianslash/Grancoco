@@ -10,13 +10,16 @@
   <content src="index.html"/>
   <access origin="*"/>
   <allow-navigation href="*"/>
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="android-minSdkVersion" value="14"/>
-  <preference name="BackupWebStorage" value="none"/>
+  <preference name="Orientation" value="portrait"/>
+  <preference name="DisallowOverscroll" value="true" />
+  <preference name="StatusBarOverlaysWebView" value="false" />
+  <preference name="StatusBarStyle" value="blackopaque" />
+  <preference name="StatusBarBackgroundColor" value="#000000" />
+  <preference name="BackgroundColor" value="0xffffffff"/>
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="ShowSplashScreenSpinner" value="false" />
+  <preference name="FadeSplashScreen" value="false"/>
+   <preference name="SplashMaintainAspectRatio" value="true" />
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
