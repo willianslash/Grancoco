@@ -7,7 +7,7 @@
   				<span style='color:#ff0000;'>{{msgFalha}}</span>
 			</center>
 		</div>
-	    <ion-slide-box ng-show="slideShow" on-slide-changed="slideHasChanged($index)" does-continue='true' style="height:90%">
+	    <ion-slide-box ng-show="slideShow" on-slide-changed="slideHasChanged($index)" does-continue='true' show-pager='{{ShowPager}}' style="height: 90%">
 			<ion-slide ng-repeat="jogo in jogos.slice().reverse()">
 		    <div>
 		    	<center>

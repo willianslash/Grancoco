@@ -28,12 +28,17 @@ angular.module('Grancoco.controllers', [])
   $scope.msgShow = true;
   $scope.slideShow = false;
 
-/*
-  $scope.jogos = Jogos.getJogos();
-  console.log($scope.jogos);
-  $ionicSlideBoxDelegate.update();
-*/
 
+  if(device.platform == 'ios' || device.platform == 'iOS'){
+    $scope.ShowPager = false;
+
+  }else{
+    $scope.ShowPager = true;
+    $scope.heightSlideBox = {"height":"90%"};
+  }
+
+
+//$scope.heightSlideBox = {"height":"350px"};
   
   $http.get("http://sergiorighini.com/2016/ws.php?__action=jogos").then(function(res,status){
 
