@@ -1,15 +1,11 @@
 <ion-view view-title="Elenco atual">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="atleta in elenco" type="item-text-wrap" href="#/tab/elenco/{{atleta.id}}">
+      <ion-item class="item-remove-animate custom-item item-avatar item-icon-right" ng-repeat="atleta in elenco" type="item-text-wrap" href="#/tab/elenco/{{atleta.id}}">
         <img ng-src="{{atleta.face}}">
         <h2>{{atleta.name}}</h2>
         <p>{{atleta.lastText}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
-       
-
-        
-      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

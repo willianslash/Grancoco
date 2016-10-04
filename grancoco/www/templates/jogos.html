@@ -7,9 +7,57 @@
   				<span style='color:#ff0000;'>{{msgFalha}}</span>
 			</center>
 		</div>
+    <!-- <ion-list>
+      <ion-item ng-repeat="jogo in jogos.slice().reverse()">
+        <div class="card-jogo">
+          <h4>
+            <small>{{jogo.dia_semana}} - {{jogo.data}}</small><br>
+            {{jogo.local}} {{jogo.hora}}
+          </h4>
+          <div class="row">
+            <div class="col-33 time">
+              <p>{{jogo.time1}}</p>
+              <img ng-src="{{jogo.img_time1}}" class="img-circle">
+            </div>
+            <div class="col-10 col-offset-10 versus">
+            {{jogo.placar_time2}}
+              <i class="ion ion-close-circled"></i>{{jogo.placar_time2}}
+            </div>
+            <div class="col-33 col-offset-10 time">
+              <p>{{jogo.time2}}</p>
+              <img ng-src="{{jogo.img_time2}}" class="img-circle">
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list> -->
 	    <ion-slide-box ng-show="slideShow" on-slide-changed="slideHasChanged($index)" does-continue='true' show-pager='{{ShowPager}}' style="height: 90%">
 			<ion-slide ng-repeat="jogo in jogos.slice().reverse()">
-		    <div>
+
+        <div class="card-jogo">
+          <h4>
+            <small>{{jogo.dia_semana}} - {{jogo.data}}</small><br>
+            {{jogo.local}} {{jogo.hora}}
+          </h4>
+          <div class="row">
+            <div class="col-33 time">
+              <p>{{jogo.time1}}</p>
+              <img ng-src="{{jogo.img_time1}}" class="img-circle">
+            </div>
+            <div class="col-33 versus">
+              <div class="placar">
+                <span>{{jogo.placar_time1}}</span>
+                <i class="ion ion-close"></i>
+                <span>{{jogo.placar_time2}}</span>
+              </div>
+            </div>
+            <div class="col-33 time">
+              <p>{{jogo.time2}}</p>
+              <img ng-src="{{jogo.img_time2}}" class="img-circle">
+            </div>
+          </div>
+        </div>
+		    <!-- <div>
 		    	<center>
 		    		<br /><br />
 		    		<table align='center' border='2'>
@@ -25,7 +73,7 @@
     					</tr>
 	    			</table>
 	    		</center>
-		    </div>
+		    </div> -->
 	  	</ion-slide>
 	  
 	</ion-slide-box>

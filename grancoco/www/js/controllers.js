@@ -28,13 +28,14 @@ angular.module('Grancoco.controllers', [])
   $scope.msgShow = true;
   $scope.slideShow = false;
 
+  if(typeof(device) === undefined) {
+    if(device.platform == 'ios' || device.platform == 'iOS'){
+      $scope.ShowPager = false;
 
-  if(device.platform == 'ios' || device.platform == 'iOS'){
-    $scope.ShowPager = false;
-
-  }else{
-    $scope.ShowPager = true;
-    $scope.heightSlideBox = {"height":"90%"};
+    }else{
+      $scope.ShowPager = true;
+      $scope.heightSlideBox = {"height":"90%"};
+    }
   }
 
 

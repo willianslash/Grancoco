@@ -1,6 +1,12 @@
 /* Empty. Add your own CSS if you like */
 /* region TUTORIAL */
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Comfortaa'
+}
+
 .tutorial.swiper-container {
   position: fixed;
   top: 0;
@@ -41,3 +47,124 @@
 .android .tutorial.swiper-container {
   margin-top: 60px;
 }
+
+/* Melhorias */
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('fonts/Comfortaa-Regular.eot');
+  src: url('fonts/Comfortaa-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Comfortaa-Regular.woff') format('woff'),
+    url('fonts/Comfortaa-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('fonts/Comfortaa-Bold.eot');
+  src: url('fonts/Comfortaa-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Comfortaa-Bold.woff') format('woff'),
+    url('fonts/Comfortaa-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('fonts/Comfortaa-Light.eot');
+  src: url('fonts/Comfortaa-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Comfortaa-Light.woff') format('woff'),
+    url('fonts/Comfortaa-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.custom-bar,
+.tabs-custom,
+.custom-bar .back-button {
+  background-color: #483b97 !important;
+  font-family: 'Comfortaa;
+}
+
+.tabs-custom > .tabs,
+.tabs.tabs-custom {
+  border-color: #0c60ee;
+  background-color: #483b97 !important;
+  background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
+  color: #fff; 
+}
+.tabs-custom .tab-item {
+  color: #fff !important; 
+  font-weight: ligher;
+}
+.tabs-custom .tab-item .icon {
+  font-size: 24px;
+  margin-bottom: -10px;
+  margin-top: 5px;
+}
+.card-jogo {
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.card-jogo > h4 {
+  text-align: center;
+}
+.card-jogo > h4 > small {
+  font-size: 12px;
+}
+.card-jogo .versus {
+  font-size: 32px;
+  padding-top: 60px;
+}
+.card-jogo .time:first-child {
+  padding-left: 10px;
+}
+.card-jogo .time p {
+  text-align: center;
+}
+.card-jogo .time img{
+  width: 100%;
+}
+.card-jogo .versus span,
+.card-jogo .versus i {
+  display: inline;
+}
+.card-jogo .versus .placar {
+  width: 80px;
+  text-align: center;
+  margin: auto;
+}
+.custom-item {
+  width: 90%;
+  background-color: #f5f5f5 !important;
+  margin: 10px auto !important;
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: 2px 2px 3px rgba(0,0,0,.055) !important;
+}
+
+.custom-item .item-content {
+  background-color: #f5f5f5 !important;
+}
+
+.titulo-imagem-historia {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  color: #fff; 
+  top: 30px;
+}
+.caption-imagem-historia {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+  top: 275px;
+} 
