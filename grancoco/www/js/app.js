@@ -93,6 +93,6 @@ angular.module('Grancoco', ['ionic', 'Grancoco.controllers', 'Grancoco.services'
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/historia');
+  $urlRouterProvider.otherwise('/tab/contato');
 
 });

@@ -1,6 +1,6 @@
-<ion-view view-title="Elenco atual">
-  <ion-content>
-    <ion-list>
+<ion-view view-title="Elenco atual" class="white-background">
+  <ion-content class="white-background">
+    <ion-list class="white-background">
       <ion-item class="item-remove-animate custom-item item-avatar item-icon-right" ng-repeat="atleta in elenco" type="item-text-wrap" href="#/tab/elenco/{{atleta.id}}">
         <img ng-src="{{atleta.face}}">
         <h2>{{atleta.name}}</h2>
