@@ -1,7 +1,7 @@
 {
   "name": "grancoco",
   "version": "1.1.1",
-  "description": "grancoco: An Ionic project",
+  "description": "Grancoco Futebol e Amizade",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
@@ -24,11 +24,7 @@
     "org.apache.cordova.device"
   ],
   "cordovaPlatforms": [
-    {
-      "platform": "android",
-      "version": "4.1.1",
-      "locator": "android@4.1.1"
-    },
-    "ios"
+    "ios",
+    "android"
   ]
 }

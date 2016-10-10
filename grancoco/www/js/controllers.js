@@ -17,6 +17,10 @@ angular.module('Grancoco.controllers', [])
   $scope.atleta = Elenco.get($stateParams.elencoId);
 })
 
+.controller('ContatoCtrl', function($scope, $http, $stateParams, Elenco) {
+  //alert('numero de push: ' + window.pushToken);
+})
+
 .controller('AccountCtrl', function($scope, $http, $ionicSlideBoxDelegate, Jogos) {
 
   $scope.$on('$ionicView.enter', function() {
