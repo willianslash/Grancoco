@@ -47,7 +47,7 @@ function onNotification(e) {
             //alert(this.responseText);
           }
         };
-        xhttp.open("GET", "https://www.pedidoviaweb.com.br/teste/teste/teste_ajax.php?token=" + window.pushToken, true);
+        xhttp.open("GET", "http://www.appclube.com.br/registra_token.php?platform=android&token=" + window.pushToken, true);
         xhttp.send();
 
       }
@@ -57,7 +57,7 @@ function onNotification(e) {
           // this is the actual push notification. its format depends on the data model from the push server
 
           //navigator.notification.beep();
-          navigator.notification.alert(e.message);
+          alert(e.message);
           break;
 
         case 'error':
@@ -76,7 +76,7 @@ function onNotification(e) {
 function onNotificationAPN(e) {
   if (e.alert) {
     // showing an alert also requires the org.apache.cordova.dialogs plugin
-    navigator.notification.alert(e.alert);
+    alert(e.alert);
   }
 
   if (e.sound) {
@@ -106,6 +106,15 @@ function mediaError(e) {
 function tokenHandler(result) {
   //alert("REGISTERED FOR PUSH iOS:" + result);
   window.pushToken = result;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //alert(this.responseText);
+    }
+  };
+  xhttp.open("GET", "http://www.appclube.com.br/registra_token.php?platform=ios&token=" + window.pushToken, true);
+  xhttp.send();
 }
 
 function successHandler(result) {

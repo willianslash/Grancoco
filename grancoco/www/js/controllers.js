@@ -45,7 +45,7 @@ angular.module('Grancoco.controllers', [])
 
 //$scope.heightSlideBox = {"height":"350px"};
   
-  $http.get("http://sergiorighini.com/2016/ws.php?__action=jogos").then(function(res,status){
+  $http.get("http://www.appclube.com.br/ws.php?__action=jogos").then(function(res,status){
 
     $scope.msg = '';
     $scope.msgShow = false;
