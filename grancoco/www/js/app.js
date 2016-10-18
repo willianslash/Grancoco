@@ -6,17 +6,22 @@ var pushNotification;
     function initializePushNotifications() {
 
           try {
-          pushNotification = window.plugins.pushNotification;
-          if (device.platform == 'android' || device.platform == 'Android' ||
-            device.platform == 'amazon-fireos') {
-            pushNotification.register(successHandler, errorHandler, {"senderID": "847272789591", "ecb": "onNotification"}); // required!
-          } else {
-            pushNotification.register(tokenHandler, errorHandler, {
-              "badge": true,
-              "sound": true,
-              "alert": true,
-              "ecb": "onNotificationAPN"
-            }); // required!
+
+          if(typeof(window.plugins.pushNotification) !== 'undefined'){
+
+            pushNotification = window.plugins.pushNotification;
+            if (device.platform == 'android' || device.platform == 'Android' ||
+              device.platform == 'amazon-fireos') {
+              pushNotification.register(successHandler, errorHandler, {"senderID": "847272789591", "ecb": "onNotification"}); // required!
+            } else {
+              pushNotification.register(tokenHandler, errorHandler, {
+                "badge": true,
+                "sound": true,
+                "alert": true,
+                "ecb": "onNotificationAPN"
+              }); // required!
+            }
+
           }
 
         }
@@ -137,7 +142,10 @@ angular.module('Grancoco', ['ionic', 'Grancoco.controllers', 'Grancoco.services'
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
 
-initializePushNotifications();
+if(typeof(window.plugins.pushNotification) !== 'undefined'){
+  initializePushNotifications();
+} 
+
 
 
 

@@ -32,7 +32,7 @@ angular.module('Grancoco.controllers', [])
   $scope.msgShow = true;
   $scope.slideShow = false;
 
-  if(typeof(device) === undefined) {
+  if( typeof( device ) !== 'undefined' ) {
     if(device.platform == 'ios' || device.platform == 'iOS'){
       $scope.ShowPager = false;
 

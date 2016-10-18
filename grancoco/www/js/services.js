@@ -4,13 +4,13 @@ angular.module('Grancoco.services', [])
 
   return{
     getJogos: function(){
-      $http.get("http://sergiorighini.com/2016/ws.php?__action=jogos").then(function(res){
+      $http.get("http://www.appclube.com.br/ws.php?__action=jogos").then(function(res){
         return res.data.jogos;
       },function(err){
         return err;
       });
     }
-  }
+  };
 })
 
 .factory('Elenco', function() {
