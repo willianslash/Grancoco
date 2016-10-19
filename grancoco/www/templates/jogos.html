@@ -40,9 +40,10 @@
             {{jogo.local}} {{jogo.hora}}
           </h4>
           <div class="row">
-            <div class="col-33 time">
+            <div class="col-33 time" align="center" style="margin-top:25px;">
+              
+              <img ng-src="{{jogo.img_time1}}" class="img-circle" style="width:88px;height:88px;">
               <p>{{jogo.time1}}</p>
-              <img ng-src="{{jogo.img_time1}}" class="img-circle">
             </div>
             <div class="col-33 versus">
               <div class="placar">
@@ -51,9 +52,10 @@
                 <span>{{jogo.placar_time2}}</span>
               </div>
             </div>
-            <div class="col-33 time">
+            <div class="col-33 time" align="center" style="margin-top:25px;">
+               
+              <img ng-src="{{jogo.img_time2}}" class="img-circle" style="width:88px;height:88px;">
               <p>{{jogo.time2}}</p>
-              <img ng-src="{{jogo.img_time2}}" class="img-circle">
             </div>
           </div>
         </div>
